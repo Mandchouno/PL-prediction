@@ -64,7 +64,9 @@
   <ItemGroup>
     <Build Include="Creations\Schemas\src.sql" />
     <Build Include="Creations\Schemas\pl.sql" />
-    <Build Include="Creations\Tables\fixtures.sql" />
-    <Build Include="Creations\Tables\team_rankings.sql" />
+    <Build Include="Creations\Tables\src_fixtures.sql" />
+    <Build Include="Creations\Tables\src_team_rankings.sql" />
+    <Build Include="Creations\Tables\pl_rankings.sql" />
+    <Build Include="Creations\Tables\pl_fixtures.sql" />
   </ItemGroup>
 </Project>
