@@ -69,4 +69,8 @@
     <Build Include="Creations\Tables\pl_rankings.sql" />
     <Build Include="Creations\Tables\pl_fixtures.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Procedures\transform_fixtures.sql" />
+    <None Include="PL-prediction-db.publish.xml" />
+  </ItemGroup>
 </Project>
