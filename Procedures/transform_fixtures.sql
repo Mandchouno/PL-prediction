@@ -1,10 +1,8 @@
 ﻿
 -- -- Insert data from CSV column into the target table
--- INSERT INTO pl.pl_fixtures (
---     fixture_id,
+-- INSERT INTO stg.stg_fixtures (
 --     Season,
---     season_sk,
---     fixture_date,
+--     Date,
 --     HomeTeam,
 --     AwayTeam,
 --     FullTimeResults,
@@ -30,7 +28,7 @@
 --     load_date
 -- )
 
-BULK INSERT pl.pl_fixtures
+BULK INSERT stg.stg_fixtures
     FROM "C:\Users\tokam\Downloads\EPL_processed_results.csv"
     WITH
     (
