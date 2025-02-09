@@ -1,0 +1,28 @@
+﻿CREATE TABLE [stg].[stg_fixtures]
+(
+	Season VARCHAR (100),
+	[Date] VARCHAR (100),
+	HomeTeam VARCHAR (100),
+	AwayTeam VARCHAR (100),
+	FullTimeResults VARCHAR (50),
+	HomeGoals INT,
+	AwayGoals INT,
+	StandingDiff INT,
+	HomeWins FLOAT,
+	AwayWins FLOAT,
+	HomeDraws FLOAT,
+	AwayDraws FLOAT,
+	AvgHomeGoals FLOAT,
+	AvgAwayGoals FLOAT,
+	AvgHomeShots FLOAT,
+	AvgAwayShots FLOAT,
+	AvgHomeShotsOnTarget FLOAT,
+	AvgAwayShotsOnTarget FLOAT,
+	AvgHomeCorners FLOAT,
+	AvgAwayCorners FLOAT,
+	AvgHomeGoalsConceded FLOAT,
+	AvgAwayGoalsConceded FLOAT,
+	AvgHomeShotsConceded FLOAT,
+	AvgAwayShotsConceded FLOAT,
+	[load_date] DATETIME2
+)
