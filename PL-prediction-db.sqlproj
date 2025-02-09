@@ -74,5 +74,6 @@
   <ItemGroup>
     <None Include="Procedures\transform_fixtures.sql" />
     <None Include="PL-prediction-db.publish.xml" />
+    <None Include="Procedures\load_final_fixtures.sql" />
   </ItemGroup>
 </Project>
