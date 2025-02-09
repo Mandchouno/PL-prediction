@@ -1,0 +1,58 @@
+﻿INSERT INTO pl.pl_fixtures (
+    fixture_id,
+    Season,
+    season_sk,
+    fixture_date,
+    HomeTeam,
+    AwayTeam,
+    FullTimeResults,
+    HomeGoals,
+    AwayGoals,
+    StandingDiff,
+    HomeWins,
+    AwayWins,
+    HomeDraws,
+    AwayDraws,
+    AvgHomeGoals,
+    AvgAwayGoals,
+    AvgHomeShots,
+    AvgAwayShots,
+    AvgHomeShotsOnTarget,
+    AvgAwayShotsOnTarget,
+    AvgHomeCorners,
+    AvgAwayCorners,
+    AvgHomeGoalsConceded,
+    AvgAwayGoalsConceded,
+    AvgHomeShotsConceded,
+    AvgAwayShotsConceded,
+    load_date
+)
+SELECT
+    fixture_id,
+    Season,
+    REPLACE(Season, '-', '') AS season_sk, -- Replace dashes in 'Season' to 'season_sk'
+    CAST([Date] AS DATETIME2) AS fixture_date, -- Convert string date to DATETIME2
+    HomeTeam,
+    AwayTeam,
+    FullTimeResults,
+    CAST(HomeGoals AS INT) AS HomeGoals, -- Ensure the HomeGoals are cast to INT
+    CAST(AwayGoals AS INT) AS AwayGoals, -- Ensure the AwayGoals are cast to INT
+    StandingDiff,
+    HomeWins,
+    AwayWins,
+    HomeDraws,
+    AwayDraws,
+    AvgHomeGoals,
+    AvgAwayGoals,
+    AvgHomeShots,
+    AvgAwayShots,
+    AvgHomeShotsOnTarget,
+    AvgAwayShotsOnTarget,
+    AvgHomeCorners,
+    AvgAwayCorners,
+    AvgHomeGoalsConceded,
+    AvgAwayGoalsConceded,
+    AvgHomeShotsConceded,
+    AvgAwayShotsConceded,
+    GETDATE()
+FROM stg.stg_fixtures;
