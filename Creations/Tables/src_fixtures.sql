@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [src].[src_fixtures]
 (
-	[fixtures] INT NOT NULL PRIMARY KEY
+	[fixtures] VARCHAR (MAX)
 	,[load_date] DATETIME2
 )
