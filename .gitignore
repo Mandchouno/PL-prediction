@@ -1,0 +1,7 @@
+bin/
+bin/Debug/.
+obj/Debug/*
+.vs/
+PL-prediction-db.sqlproj
+PL-prediction-db.jfm
+PL-prediction-db.dbmdl
