@@ -68,6 +68,8 @@
     <Build Include="Creations\Tables\src_team_rankings.sql" />
     <Build Include="Creations\Tables\pl_rankings.sql" />
     <Build Include="Creations\Tables\pl_fixtures.sql" />
+    <Build Include="Creations\Schemas\stg.sql" />
+    <Build Include="Creations\Tables\stg_fixtures.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Procedures\transform_fixtures.sql" />
