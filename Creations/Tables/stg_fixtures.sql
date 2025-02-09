@@ -1,12 +1,13 @@
 ﻿CREATE TABLE [stg].[stg_fixtures]
 (
+	[fixture_id] [int] NOT NULL,
 	Season VARCHAR (100),
 	[Date] VARCHAR (100),
 	HomeTeam VARCHAR (100),
 	AwayTeam VARCHAR (100),
 	FullTimeResults VARCHAR (50),
-	HomeGoals INT,
-	AwayGoals INT,
+	HomeGoals VARCHAR (50),
+	AwayGoals VARCHAR (50),
 	StandingDiff INT,
 	HomeWins FLOAT,
 	AwayWins FLOAT,
