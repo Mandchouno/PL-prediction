@@ -2,7 +2,7 @@
 (
 	--[team_id] INT NOT NULL PRIMARY KEY
 	--[ranking_id] INT NOT NULL PRIMARY KEY
-	[Season] VARCHAR (100)
+	[SeasonSk] INT
 	,[Position] INT 
 	,[Team] VARCHAR (100)
 	,[GamesPlayed] INT
@@ -14,4 +14,5 @@
 	,[GoalDifference] INT
 	,[Points] INT
 	,[Qualification or relegation] VARCHAR (200)
+	,[load_date] DATETIME2
 )
