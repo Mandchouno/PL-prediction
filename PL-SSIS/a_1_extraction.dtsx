@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="2/15/2025 8:05:52 AM"
@@ -12,7 +12,7 @@
   DTS:ObjectName="a_1_extraction"
   DTS:PackageType="5"
   DTS:VersionBuild="13"
-  DTS:VersionGUID="{D6E963DA-C7D8-4E17-A4A4-F0D51C630291}">
+  DTS:VersionGUID="{150DE6F3-24D2-48E3-B197-0B376B391379}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAp07EAKn2tUKHAK87v4A9PgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAL5o+bqvdjbCxrX1NGWAV/O6j2mcQvP2XruE0X+dIlWwAAAAAOgAAAAAIAACAAAACjFsgwbZKgOEh4SBMvkSss5yf/tOPIGhNNy9Kg83EN9iAAAAC4WMcb2vtvYHedbeesBL056EqB3zIYmVOFIWhq3X1he0AAAABLA2aSfWTUhwX9YcB9vsqD2QcVggWNrCKVUucnv7bCV+vsc1df/xGmdXaa9GR50M4MbVeaeuG1M6N6XWTQsDox</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAp07EAKn2tUKHAK87v4A9PgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADyUKDUIcG651rvuWw08j6WOnyhGViD7MTjY2Q79I/cgAAAAAAOgAAAAAIAACAAAACaH26rx1cEUn12MI1J69Mxvmj3F7LHnQAMG3QJRkcYryAAAADJTg1tVv2QY8zL2S/hkPmpjVGic48f1AAgn5m6IFvdt0AAAABDF6Uck9CD3h0ST6gWy9b97BN4IS2olQQDVAYyv2Ad/0OWFOmc0K4M0brMhXmFnxkH7/YAhRevFW3l3/n5bhHq</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -92,7 +92,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Run python extractor for all fixtures"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="Arguments">@[User::Extractor_fixtures]</DTS:PropertyExpression>
@@ -116,7 +116,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Run python extractor for all rankings"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="Arguments">@[User::Extractor_rankings]</DTS:PropertyExpression>
