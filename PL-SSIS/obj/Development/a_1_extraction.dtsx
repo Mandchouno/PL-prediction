@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/15/2025 8:05:52 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="HEMLE-XPS"
+  DTS:CreatorName="HEMLE-XPS\tokam"
+  DTS:DTSID="{E86E4D63-B1ED-45D9-84ED-3D7D126F2001}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="a_1_extraction"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{CBEBBDBA-FC5B-4671-AC79-6D796F4247E8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[master-vitam-aeternam.database.windows.net.PL-prediction-azure.CloudSA55a217df]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A542A6ED-7268-49CD-8698-FA7430164974}"
+      DTS:ObjectName="master-vitam-aeternam.database.windows.net.PL-prediction-azure.CloudSA55a217df">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=master-vitam-aeternam.database.windows.net;User ID=CloudSA55a217df;Initial Catalog=PL-prediction-azure;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-a_1_extraction-{A542A6ED-7268-49CD-8698-FA7430164974}master-vitam-aeternam.database.windows.net.PL-prediction-azure.Cloud;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAp07EAKn2tUKHAK87v4A9PgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD3ckRGb5JlIAal7c7jQ13EJR/6Cza/37p+xEiUtsm+ygAAAAAOgAAAAAIAACAAAACeWWlKphWhKrnrUfytr1PQkItX+lvmKJHRWuSPCWBdTiAAAAC+em5TZITsjdbsR2nKN3mKRwUIr5TihtX8gyU20kVp+EAAAAAK7EEDSXUlPU7Aov390rp19xKzB8UgEzzuuFiLcDRn7O7sBevChzEHMLRHaoAObH6MhNQ8Xjng1mLPiQIhJ9Qk</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9C87E89D-FD65-4742-8D25-E19EB67DD9DC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Extractor_fixtures">
+      <DTS:VariableValue
+        DTS:DataType="8">Extractor_fixtures.py</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A95F11DC-67FE-4B6C-81FF-A7480070D6E2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Extractor_rankings">
+      <DTS:VariableValue
+        DTS:DataType="8">Extractor_rankings.py</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E050CB41-3A3A-46B8-A97C-AEEBB994C29A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PythonPath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\tokam\AppData\Local\Microsoft\WindowsApps\python.exe</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B716A600-5ED5-4A54-8955-5DB0A4BAC794}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="WorkingDir">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-PY</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Run python extractors"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{C19A92FE-A749-4C16-98BB-F9840B3C09F2}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Run python extractors">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Run python extractors\Run python extractor for all fixtures"
+          DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:Description="Execute Extractor.py"
+          DTS:DTSID="{96940610-00d5-45dc-85c2-b15b1895dc18}"
+          DTS:ExecutableType="Microsoft.ExecuteProcess"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Run python extractor for all fixtures"
+          DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Arguments">@[User::Extractor_fixtures]</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="Executable">@[User::PythonPath]</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[User::WorkingDir]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ExecuteProcessData
+              Executable="C:\Users\tokam\AppData\Local\Microsoft\WindowsApps\python.exe"
+              Arguments="Extractor_fixtures.py"
+              WorkingDirectory="C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-PY" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Run python extractors\Run python extractor for all rankings"
+          DTS:CreationName="Microsoft.ExecuteProcess"
+          DTS:Description="Execute Extractor_rankings.py"
+          DTS:DTSID="{197d4aae-b6b5-4974-af2e-4277804f6afc}"
+          DTS:ExecutableType="Microsoft.ExecuteProcess"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Run python extractor for all rankings"
+          DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="1">
+          <DTS:Variables />
+          <DTS:PropertyExpression
+            DTS:Name="Arguments">@[User::Extractor_rankings]</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="Executable">@[User::PythonPath]</DTS:PropertyExpression>
+          <DTS:PropertyExpression
+            DTS:Name="WorkingDirectory">@[User::WorkingDir]</DTS:PropertyExpression>
+          <DTS:ObjectData>
+            <ExecuteProcessData
+              Executable="C:\Users\tokam\AppData\Local\Microsoft\WindowsApps\python.exe"
+              Arguments="Extractor_rankings.py"
+              WorkingDirectory="C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-PY" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="244,42.6666666666667"
+          Id="Package\Run python extractors\Run python extractor for all fixtures"
+          TopLeft="38.750000949949,19.6315793906057" />
+        <NodeLayout
+          Size="250.666666666667,42.6666666666667"
+          Id="Package\Run python extractors\Run python extractor for all rankings"
+          TopLeft="50.6249941606076,106.736840362364" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="606.666666666667,204.666666666667"
+          Size="606.666666666667,247.333333333334"
+          Id="Package\Run python extractors"
+          TopLeft="80.1250119302417,39.8947368871803" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
