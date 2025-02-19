@@ -57,7 +57,7 @@ CREATE TABLE #temp_fixtures (
     );
 
 BULK INSERT #temp_fixtures
-    FROM "C:\Users\tokam\Downloads\EPL_processed_results.csv"
+    FROM "C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\Data sets\set1\EPL_processed_results.csv"
     WITH
     (
 	FORMAT = 'CSV',
