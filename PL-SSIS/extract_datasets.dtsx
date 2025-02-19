@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="2/7/2025 1:11:45 PM"
@@ -12,7 +12,7 @@
   DTS:ObjectName="extract_datasets"
   DTS:PackageType="5"
   DTS:VersionBuild="11"
-  DTS:VersionGUID="{8DE8D699-84AE-4897-9410-CE21E3FC29D5}">
+  DTS:VersionGUID="{17ED9881-25D6-4943-BB7E-64656EC3BFE8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
