@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/19/2025 8:32:39 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="HEMLE-XPS"
+  DTS:CreatorName="HEMLE-XPS\tokam"
+  DTS:DTSID="{9FD573CE-722F-4B54-AC77-C5096E7CF250}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{B741565E-90C6-4107-80C1-6C6B1F95F5FA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[a_transform_fixtures.sql]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{D5F7F86D-DAD0-427D-B050-3E218187DEDD}"
+      DTS:ObjectName="a_transform_fixtures.sql">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\Procedures\a_transform_fixtures.sql" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[a_transform_rankings.sql]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{945178BB-2D61-41E1-A137-A58D4C61FF65}"
+      DTS:ObjectName="a_transform_rankings.sql">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\Procedures\a_transform_rankings.sql" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[load_final_fixtures.sql]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{2B91AE2D-0529-4AA4-9E76-24049B81AA26}"
+      DTS:ObjectName="load_final_fixtures.sql">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\Procedures\load_final_fixtures.sql" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[master-vitam-aeternam.database.windows.net.PL-prediction-azure.CloudSA55a217df]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A23209CB-40FD-4999-90D3-EA91542A9AED}"
+      DTS:ObjectName="master-vitam-aeternam.database.windows.net.PL-prediction-azure.CloudSA55a217df">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=master-vitam-aeternam.database.windows.net;User ID=CloudSA55a217df;Initial Catalog=PL-prediction-azure;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{A23209CB-40FD-4999-90D3-EA91542A9AED}master-vitam-aeternam.database.windows.net.PL-prediction-azure.CloudSA55a2;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAp07EAKn2tUKHAK87v4A9PgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAASyTT5dmwVWe84TUT3WcMV9h6vIDJNJzQISsm9dFAahQAAAAAOgAAAAAIAACAAAAAlRn2qAnyPRXvMUJCRXHU3sr9+Qah6o1YMBB8aMdJ2wSAAAABSgC9ETzcffQTcGLNmx3qIMs2PaR2BRsESpmstctSVXkAAAABCNEGRj8tw7ToiMhM1gIJ//CmyUiCCjLSbEdxqtH/lm3nZTXlIhGm4+bmO/1AxnMM7qNOFMbII2LfXbBh4GVir</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\load fixtures in final schema"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{19137d86-6bc5-4bad-810b-af051968d2d0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="load fixtures in final schema"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A23209CB-40FD-4999-90D3-EA91542A9AED}"
+          SQLTask:SqlStmtSourceType="FileConnection"
+          SQLTask:SqlStatementSource="load_final_fixtures.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\transform data"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{beab9b5b-3f75-4dce-b006-9aa0cfc79f78}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="transform data">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\transform data\transform load source rankings"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{76f64812-68da-48ca-98b8-09b16ebac960}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="transform load source rankings"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{A23209CB-40FD-4999-90D3-EA91542A9AED}"
+              SQLTask:SqlStmtSourceType="FileConnection"
+              SQLTask:SqlStatementSource="a_transform_rankings.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\transform data\transform staged fixtures"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{74750e14-8368-42f0-84c4-039ac7ee068b}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="transform staged fixtures"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{A23209CB-40FD-4999-90D3-EA91542A9AED}"
+              SQLTask:SqlStmtSourceType="FileConnection"
+              SQLTask:SqlStatementSource="a_transform_fixtures.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\transform data.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{44FD1784-DC16-4B36-B493-FA1C1ECAD019}"
+          DTS:From="Package\transform data\transform staged fixtures"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\transform data\transform load source rankings" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{17C21111-7C6B-4DFF-901F-FC2030031143}"
+      DTS:From="Package\transform data"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\load fixtures in final schema" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="180,42.6666666666667"
+          Id="Package\transform data\transform load source rankings"
+          TopLeft="26.5,107.5" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\transform data\transform staged fixtures"
+          TopLeft="32.5,10.5" />
+        <EdgeLayout
+          Id="Package\transform data.PrecedenceConstraints[Constraint]"
+          TopLeft="132.5,52.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16,55"
+              Start="0,0"
+              End="-16,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="-4,27.5" />
+                  <mssgle:LineSegment
+                    End="-12,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12,27.5"
+                    Point2="-16,27.5"
+                    Point3="-16,31.5" />
+                  <mssgle:LineSegment
+                    End="-16,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="293.333333333334,208"
+          Size="293.333333333334,250.666666666667"
+          Id="Package\transform data"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="170.666666666667,42.6666666666667"
+          Id="Package\load fixtures in final schema"
+          TopLeft="461.999988019467,152.43590572782" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="353.333333333333,185.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108.666654686133,-11.5640942721797"
+              Start="0,0"
+              End="101.166654686133,-11.5640942721797">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.3333273430667,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.3333273430667,0"
+                    Point2="54.3333273430667,0"
+                    Point3="54.3333273430667,-4" />
+                  <mssgle:LineSegment
+                    End="54.3333273430667,-7.56409427217966" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54.3333273430667,-7.56409427217966"
+                    Point2="54.3333273430667,-11.5640942721797"
+                    Point3="58.3333273430667,-11.5640942721797" />
+                  <mssgle:LineSegment
+                    End="101.166654686133,-11.5640942721797" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
