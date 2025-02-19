@@ -14,3 +14,7 @@ C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league 
 C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\obj\Debug\PL-prediction-db.sqlproj.AssemblyReference.cache
 C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\obj\Debug\PL_prediction_db.dll
 C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\obj\Debug\PL_prediction_db.pdb
+C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\obj\Debug\Model.xml
+C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\obj\Debug\refactor.xml
+C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\obj\Debug\postdeploy.sql
+C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\obj\Debug\predeploy.sql
