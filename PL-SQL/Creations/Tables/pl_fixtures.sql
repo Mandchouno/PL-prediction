@@ -3,7 +3,7 @@
 	[fixture_id] INT NOT NULL PRIMARY KEY,
 	Season VARCHAR (100),
 	[season_sk] INT,
-	[fixture_date] DATETIME2,
+	[fixture_date] DATE,
 	HomeTeam VARCHAR (100),
 	AwayTeam VARCHAR (100),
 	FullTimeResults VARCHAR (50),
