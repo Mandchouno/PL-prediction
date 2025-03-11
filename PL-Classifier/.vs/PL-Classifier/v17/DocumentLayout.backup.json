@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3046270C-79FA-4D3F-8CF6-A295209D9A35}|PL-Classifier.pyproj|C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{3046270C-79FA-4D3F-8CF6-A295209D9A35}|PL-Classifier.pyproj|solutionrelative:classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{B8F4F00C-5A89-46C1-9E71-7EFCD639FCD9}|PL-Classifier.pyproj|C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{B8F4F00C-5A89-46C1-9E71-7EFCD639FCD9}|PL-Classifier.pyproj|solutionrelative:classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "classifier.py",
               "ToolTip": "C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\classifier.py",
               "RelativeToolTip": "classifier.py",
-              "ViewState": "AgIAAPwAAAAAAAAAAAAnwOsAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgBAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-03-11T17:21:31.847Z",
               "EditorCaption": ""
