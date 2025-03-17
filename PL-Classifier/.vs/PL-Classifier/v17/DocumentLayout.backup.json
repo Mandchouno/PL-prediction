@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8F4F00C-5A89-46C1-9E71-7EFCD639FCD9}|PL-Classifier.pyproj|C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{B8F4F00C-5A89-46C1-9E71-7EFCD639FCD9}|PL-Classifier.pyproj|solutionrelative:classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{F1033D51-20CD-49DA-A12A-12CCD0129678}|PL-Classifier.pyproj|C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{F1033D51-20CD-49DA-A12A-12CCD0129678}|PL-Classifier.pyproj|solutionrelative:classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,6 +37,10 @@
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "classifier.py",
@@ -44,7 +48,7 @@
               "RelativeDocumentMoniker": "classifier.py",
               "ToolTip": "C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\classifier.py",
               "RelativeToolTip": "classifier.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgBAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-03-11T17:21:31.847Z",
               "EditorCaption": ""
