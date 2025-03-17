@@ -25,6 +25,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="environment.yml" />
+    <Content Include="FFNN_results_pred.ipynb" />
+    <Content Include="XGBoost_pred.ipynb" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
