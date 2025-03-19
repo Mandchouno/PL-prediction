@@ -22,6 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="batch_extractor.py" />
     <Compile Include="extractor_fixtures.py" />
     <Compile Include="Extractor_rankings.py" />
   </ItemGroup>
