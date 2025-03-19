@@ -26,10 +26,14 @@ jsonData = json.dumps(wrapped_json, ensure_ascii=False)
 # with open(json_filename, "w", encoding="utf-8") as json_file:
 #     json_file.write(jsonData)
 
-server = "master-vitam-aeternam.database.windows.net"
-database = "PL-prediction-azure"
-username = "CloudSA55a217df"
-password = "1234Mama!"
+# server = "master-vitam-aeternam.database.windows.net"
+# database = "PL-prediction-azure"
+# username = "CloudSA55a217df"
+# password = "1234Mama!"
+server = "."
+database = "PL-prediction-db"
+username = "lilian"
+password = "12345678"
 driver = "ODBC Driver 17 for SQL Server"
 conn_str = f"mssql+pyodbc://{username}:{password}@{server}/{database}?driver={driver}"
 #conn_str = "Server=tcp:master-vitam-aeternam.database.windows.net,1433;Initial Catalog=PL-prediction-azure;Persist Security Info=False;User ID=CloudSA55a217df;Password=1234Mama!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
