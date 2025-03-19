@@ -25,12 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=master-vitam-aeternam.database.windows.net;User ID=CloudSA55a217df;Initial Catalog=PL-prediction-azure;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-a_1_extraction-{A542A6ED-7268-49CD-8698-FA7430164974}master-vitam-aeternam.database.windows.net.PL-prediction-azure.Cloud;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAp07EAKn2tUKHAK87v4A9PgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD4EY3FsBqp1R/ggkgTBZBa4WYYQul62AANyTNfCbf0OQAAAAAOgAAAAAIAACAAAAD+puOa3s95HOEZ8/ODOM9z+9mzxD/MnOtY1K79WsccjiAAAAAQXVNWNJsd7KfjSP5Cc8b6Zxvo2kLirmc8vlDGH7wnhEAAAAB0YzkSP03sdGGeQnZHI67SJxkhqM3izYNeKV7pUWf+qVVW1jK096VprRk1vOT3hvBSpZ2IlxGh20Shamarp8Ag</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=master-vitam-aeternam.database.windows.net;User ID=CloudSA55a217df;Initial Catalog=PL-prediction-azure;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-a_1_extraction-{A542A6ED-7268-49CD-8698-FA7430164974}master-vitam-aeternam.database.windows.net.PL-prediction-azure.Cloud;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -92,7 +87,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Run python extractor for all fixtures"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="Arguments">@[User::Extractor_fixtures]</DTS:PropertyExpression>
@@ -116,7 +111,7 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="Run python extractor for all rankings"
           DTS:TaskContact="Execute Process Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="Arguments">@[User::Extractor_rankings]</DTS:PropertyExpression>

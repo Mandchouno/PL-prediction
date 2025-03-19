@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="2/15/2025 8:05:52 AM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="a_1_extraction"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{150DE6F3-24D2-48E3-B197-0B376B391379}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{5F66707D-A170-4B35-8A08-1615EEB6FE0F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,12 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=master-vitam-aeternam.database.windows.net;User ID=CloudSA55a217df;Initial Catalog=PL-prediction-azure;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-a_1_extraction-{A542A6ED-7268-49CD-8698-FA7430164974}master-vitam-aeternam.database.windows.net.PL-prediction-azure.Cloud;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAp07EAKn2tUKHAK87v4A9PgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADyUKDUIcG651rvuWw08j6WOnyhGViD7MTjY2Q79I/cgAAAAAAOgAAAAAIAACAAAACaH26rx1cEUn12MI1J69Mxvmj3F7LHnQAMG3QJRkcYryAAAADJTg1tVv2QY8zL2S/hkPmpjVGic48f1AAgn5m6IFvdt0AAAABDF6Uck9CD3h0ST6gWy9b97BN4IS2olQQDVAYyv2Ad/0OWFOmc0K4M0brMhXmFnxkH7/YAhRevFW3l3/n5bhHq</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=master-vitam-aeternam.database.windows.net;User ID=CloudSA55a217df;Initial Catalog=PL-prediction-azure;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-a_1_extraction-{A542A6ED-7268-49CD-8698-FA7430164974}master-vitam-aeternam.database.windows.net.PL-prediction-azure.Cloud;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -42,7 +37,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Extractor_fixtures">
       <DTS:VariableValue
-        DTS:DataType="8">Extractor_fixtures.py</DTS:VariableValue>
+        DTS:DataType="8">batch_extractor.py</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -69,7 +64,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="WorkingDir">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-PY</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\tokam\Documents\Big Projects\Win 2025\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-PY</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -86,7 +81,7 @@
         <DTS:Executable
           DTS:refId="Package\Run python extractors\Run python extractor for all fixtures"
           DTS:CreationName="Microsoft.ExecuteProcess"
-          DTS:Description="Execute Extractor.py"
+          DTS:Description="Execute Extractor python"
           DTS:DTSID="{96940610-00d5-45dc-85c2-b15b1895dc18}"
           DTS:ExecutableType="Microsoft.ExecuteProcess"
           DTS:LocaleID="-1"
@@ -103,8 +98,8 @@
           <DTS:ObjectData>
             <ExecuteProcessData
               Executable="C:\Users\tokam\AppData\Local\Microsoft\WindowsApps\python.exe"
-              Arguments="Extractor_fixtures.py"
-              WorkingDirectory="C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-PY" />
+              Arguments="batch_extractor.py"
+              WorkingDirectory="C:\Users\tokam\Documents\Big Projects\Win 2025\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-PY" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -128,7 +123,7 @@
             <ExecuteProcessData
               Executable="C:\Users\tokam\AppData\Local\Microsoft\WindowsApps\python.exe"
               Arguments="Extractor_rankings.py"
-              WorkingDirectory="C:\Users\tokam\Documents\Big Projects\Year 2024\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-PY" />
+              WorkingDirectory="C:\Users\tokam\Documents\Big Projects\Win 2025\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-PY" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -157,7 +152,7 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="338,204"
+          PanelSize="338,204.666666666667"
           Size="338,247.333333333334"
           Id="Package\Run python extractors"
           TopLeft="80.1250119302417,39.8947368871803" />
