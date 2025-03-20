@@ -18,10 +18,14 @@ wrapped_json = {"rankings": rankings_list}
 # Convert back to JSON string
 jsonData = json.dumps(wrapped_json, ensure_ascii=False)
 
-server = "master-vitam-aeternam.database.windows.net"
-database = "PL-prediction-azure"
-username = "CloudSA55a217df"
-password = "1234Mama!"
+# server = "master-vitam-aeternam.database.windows.net"
+# database = "PL-prediction-azure"
+# username = "CloudSA55a217df"
+# password = "1234Mama!"
+server = "."
+database = "PL-prediction-db"
+username = "lilian"
+password = "12345678"
 driver = "ODBC Driver 17 for SQL Server"
 conn_str = f"mssql+pyodbc://{username}:{password}@{server}/{database}?driver={driver}"
 
