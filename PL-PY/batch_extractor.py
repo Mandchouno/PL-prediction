@@ -30,6 +30,7 @@ def download_and_process_files(file_links):
     for file_name in file_links:
         file_url = RAW_URL_BASE + file_name
         df = pd.read_csv(file_url)
+        df = df.where(pd.notna(df), 0)
         season = file_name[:4] + '-' + file_name[7:9]  # Convert filename format to 'YYYY-YY'
         df['season'] = season
         df['fixture_id'] = range(fixture_id, fixture_id + len(df))  # Assign fixture_id
@@ -50,7 +51,7 @@ fixture_id = jsonData[-1]['fixture_id']+1
 df['fixture_id'] = range(fixture_id, fixture_id + len(df))
 data = df.to_json(orient="records")
 jsonData.extend(json.loads(data))
-jsonData = json.dumps(jsonData)
+jsonData = json.dumps({"fixtures": jsonData}, ensure_ascii=False)
 
 # server = "master-vitam-aeternam.database.windows.net"
 # database = "PL-prediction-azure"
