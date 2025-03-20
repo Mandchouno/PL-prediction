@@ -62,4 +62,66 @@ SELECT
     JSON_VALUE(fixtures.value, '$.AvgHomeShotsConceded'),
     JSON_VALUE(fixtures.value, '$.AvgAwayShotsConceded'),
     SYSDATETIME()
-FROM OPENJSON(@JsonData, '$.fixtures') AS fixtures;
+FROM OPENJSON(@JsonData, '$.fixtures') AS fixtures
+WHERE JSON_VALUE(fixtures.value, '$.HomeGoals') IS NOT NULL;
+
+INSERT INTO stg.stg_fixtures (
+    fixture_id, Season, Date, HomeTeam, AwayTeam, FullTimeResults, HomeGoals, AwayGoals, StandingDiff, 
+    HomeWins, AwayWins, HomeDraws, AwayDraws, AvgHomeGoals, AvgAwayGoals, AvgHomeShots, AvgAwayShots, 
+    AvgHomeShotsOnTarget, AvgAwayShotsOnTarget, AvgHomeCorners, AvgAwayCorners, AvgHomeGoalsConceded, 
+    AvgAwayGoalsConceded, AvgHomeShotsConceded, AvgAwayShotsConceded, load_date
+)
+SELECT
+    JSON_VALUE(fixtures.value, '$.fixture_id'),
+    JSON_VALUE(fixtures.value, '$.season'),
+    JSON_VALUE(fixtures.value, '$.Date'),
+    JSON_VALUE(fixtures.value, '$.HomeTeam'),
+    JSON_VALUE(fixtures.value, '$.AwayTeam'),
+    JSON_VALUE(fixtures.value, '$.FTR'),
+    JSON_VALUE(fixtures.value, '$.FTHG'),
+    JSON_VALUE(fixtures.value, '$.FTAG'),
+    JSON_VALUE(fixtures.value, '$.current_standing_diff'),
+    CAST(JSON_VALUE(fixtures.value, '$.HT_win_rate_season') AS FLOAT)*(CAST(JSON_VALUE(fixtures.value, '$.HT_match_played') AS FLOAT )+1),
+    CAST(JSON_VALUE(fixtures.value, '$.AT_win_rate_season') AS FLOAT)*(CAST(JSON_VALUE(fixtures.value, '$.AT_match_played') AS FLOAT )+1),
+    NULL,
+    NULL,
+    CAST(JSON_VALUE(fixtures.value, '$.HT_goal_for') AS FLOAT)/(CAST(JSON_VALUE(fixtures.value, '$.HT_match_played') AS FLOAT )+1),
+    CAST(JSON_VALUE(fixtures.value, '$.AT_goal_for') AS FLOAT)/(CAST(JSON_VALUE(fixtures.value, '$.AT_match_played') AS FLOAT )+1),
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    CAST(JSON_VALUE(fixtures.value, '$.HT_goal_against') AS FLOAT)/(CAST(JSON_VALUE(fixtures.value, '$.HT_match_played') AS FLOAT )+1),
+    CAST(JSON_VALUE(fixtures.value, '$.AT_goal_against') AS FLOAT)/(CAST(JSON_VALUE(fixtures.value, '$.AT_match_played') AS FLOAT )+1),
+    NULL,
+    NULL,
+    -- JSON_VALUE(fixtures.value, '$.HT_current_standing'),
+    -- JSON_VALUE(fixtures.value, '$.AT_current_standing'),
+    -- JSON_VALUE(fixtures.value, '$.HT_past_standing'),
+    -- JSON_VALUE(fixtures.value, '$.HT_past_goal_diff'),
+    -- JSON_VALUE(fixtures.value, '$.HT_past_win_rate'),
+    -- JSON_VALUE(fixtures.value, '$.HT_goal_diff'),
+    -- JSON_VALUE(fixtures.value, '$.AT_past_standing'),
+    -- JSON_VALUE(fixtures.value, '$.AT_past_goal_diff'),
+    -- JSON_VALUE(fixtures.value, '$.AT_past_win_rate'),
+    -- JSON_VALUE(fixtures.value, '$.AT_goal_diff'),
+    -- JSON_VALUE(fixtures.value, '$.HT_3_win_streak'),
+    -- JSON_VALUE(fixtures.value, '$.HT_5_win_streak'),
+    -- JSON_VALUE(fixtures.value, '$.HT_3_lose_Streak'),
+    -- JSON_VALUE(fixtures.value, '$.HT_5_lose_Streak'),
+    -- JSON_VALUE(fixtures.value, '$.AT_3_win_streak'),
+    -- JSON_VALUE(fixtures.value, '$.AT_5_win_streak'),
+    -- JSON_VALUE(fixtures.value, '$.AT_3_lose_Streak'),
+    -- JSON_VALUE(fixtures.value, '$.AT_5_lose_Streak'),
+    -- JSON_VALUE(fixtures.value, '$.HT_5_win_rate'),
+    -- JSON_VALUE(fixtures.value, '$.AT_5_win_rate'),
+    -- JSON_VALUE(fixtures.value, '$.past_standing_diff'),
+    -- JSON_VALUE(fixtures.value, '$.past_goal_diff_diff'),
+    -- JSON_VALUE(fixtures.value, '$.past_win_rate_diff'),
+    -- JSON_VALUE(fixtures.value, '$.win_rate_season_diff'),
+    -- JSON_VALUE(fixtures.value, '$.goal_diff_diff'),
+    SYSDATETIME()
+FROM OPENJSON(@JsonData, '$.fixtures') AS fixtures
+WHERE JSON_VALUE(fixtures.value, '$.FTHG') IS NOT NULL;
