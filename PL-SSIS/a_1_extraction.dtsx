@@ -11,24 +11,10 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="a_1_extraction"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{5F66707D-A170-4B35-8A08-1615EEB6FE0F}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{1D4A13C4-3EF5-430E-90DE-0267524A8FBE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[master-vitam-aeternam.database.windows.net.PL-prediction-azure.CloudSA55a217df]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{A542A6ED-7268-49CD-8698-FA7430164974}"
-      DTS:ObjectName="master-vitam-aeternam.database.windows.net.PL-prediction-azure.CloudSA55a217df">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=master-vitam-aeternam.database.windows.net;User ID=CloudSA55a217df;Initial Catalog=PL-prediction-azure;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-a_1_extraction-{A542A6ED-7268-49CD-8698-FA7430164974}master-vitam-aeternam.database.windows.net.PL-prediction-azure.Cloud;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -55,7 +41,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="PythonPath">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\tokam\AppData\Local\Microsoft\WindowsApps\python.exe</DTS:VariableValue>
+        DTS:DataType="8">C:\Program Files\Python38\python.exe</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -97,7 +83,7 @@
             DTS:Name="WorkingDirectory">@[User::WorkingDir]</DTS:PropertyExpression>
           <DTS:ObjectData>
             <ExecuteProcessData
-              Executable="C:\Users\tokam\AppData\Local\Microsoft\WindowsApps\python.exe"
+              Executable="C:\Program Files\Python38\python.exe"
               Arguments="batch_extractor.py"
               WorkingDirectory="C:\Users\tokam\Documents\Big Projects\Win 2025\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-PY" />
           </DTS:ObjectData>
@@ -121,7 +107,7 @@
             DTS:Name="WorkingDirectory">@[User::WorkingDir]</DTS:PropertyExpression>
           <DTS:ObjectData>
             <ExecuteProcessData
-              Executable="C:\Users\tokam\AppData\Local\Microsoft\WindowsApps\python.exe"
+              Executable="C:\Program Files\Python38\python.exe"
               Arguments="Extractor_rankings.py"
               WorkingDirectory="C:\Users\tokam\Documents\Big Projects\Win 2025\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-PY" />
           </DTS:ObjectData>
