@@ -1,6 +1,12 @@
+PL-Classifier/env/Lib/site-packages/
+PL-Classifier/env/Lib/site-packages
 PL-Classifier/env/Lib/site-packages/*
 PL-Classifier/env/Lib/site-packages/_pycache_
 PL-Classifier/env/Lib/site-packages/keras
 
 PL-Classifier/standings_predicted.csv
 PL-Classifier/results_predictions.csv
+PL-SQL
+PL-SSIS
+PL-Classifier/match_goals_predictions.csv
+PL-Classifier/g_results_predictions.csv
