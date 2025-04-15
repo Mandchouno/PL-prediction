@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{517ACB98-BB7E-47C8-B703-80815F494480}|PL-Classifier.pyproj|C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{517ACB98-BB7E-47C8-B703-80815F494480}|PL-Classifier.pyproj|solutionrelative:classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{CC89035E-6FC2-4432-BA4F-764B014EE440}|PL-Classifier.pyproj|C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{CC89035E-6FC2-4432-BA4F-764B014EE440}|PL-Classifier.pyproj|solutionrelative:classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,15 +30,19 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
