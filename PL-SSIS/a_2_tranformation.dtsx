@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{51F7CC6F-9C93-4A17-B1CE-D530F63F760D}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{A5E03CEE-FBFA-49EF-9CB9-1AEF92BD3A5A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -44,6 +44,16 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="C:\Users\tokam\Documents\Big Projects\Win 2025\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\Procedures\load_final_fixtures.sql" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[load_match_results.sql]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{5A355E50-986F-479E-B978-C3D945318D93}"
+      DTS:ObjectName="load_match_results.sql">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\tokam\Documents\Big Projects\Win 2025\Machine Learning\Premier league prediction\data\PL-prediction-db\PL-SQL\Procedures\load_match_results.sql" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -89,6 +99,24 @@
           SQLTask:Connection="{762CC735-4EBC-419F-92A4-0306FD36C566}"
           SQLTask:SqlStmtSourceType="FileConnection"
           SQLTask:SqlStatementSource="load_final_fixtures.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\load new match results"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{cb8a522a-7d96-4d36-9b68-9d26fe473e4f}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="load new match results"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{762CC735-4EBC-419F-92A4-0306FD36C566}"
+          SQLTask:SqlStmtSourceType="FileConnection"
+          SQLTask:SqlStatementSource="load_match_results.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -159,6 +187,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\load fixtures in final schema" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{4BABD013-2271-473A-9333-E1CAC108597C}"
+      DTS:From="Package\load fixtures in final schema"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\load new match results" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -173,7 +209,7 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="170.666666666667,42.6666666666667"
+          Size="210.666666666667,42.6666666666667"
           Id="Package\load fixtures in final schema"
           TopLeft="461.999988019467,152.43590572782" />
         <NodeLayout
@@ -231,26 +267,64 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="108.666654686133,-11.5640942721797"
+              EndConnector="108.666654686134,-11.56409427218"
               Start="0,0"
-              End="101.166654686133,-11.5640942721797">
+              End="101.166654686134,-11.56409427218">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="50.3333273430667,0" />
+                    End="50.3333273430669,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="50.3333273430667,0"
-                    Point2="54.3333273430667,0"
-                    Point3="54.3333273430667,-4" />
+                    Point1="50.3333273430669,0"
+                    Point2="54.3333273430669,0"
+                    Point3="54.3333273430669,-4" />
                   <mssgle:LineSegment
-                    End="54.3333273430667,-7.56409427217966" />
+                    End="54.3333273430669,-7.56409427217997" />
                   <mssgle:CubicBezierSegment
-                    Point1="54.3333273430667,-7.56409427217966"
-                    Point2="54.3333273430667,-11.5640942721797"
-                    Point3="58.3333273430667,-11.5640942721797" />
+                    Point1="54.3333273430669,-7.56409427217997"
+                    Point2="54.3333273430669,-11.56409427218"
+                    Point3="58.3333273430669,-11.56409427218" />
                   <mssgle:LineSegment
-                    End="101.166654686133,-11.5640942721797" />
+                    End="101.166654686134,-11.56409427218" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="188,42.6666666666667"
+          Id="Package\load new match results"
+          TopLeft="446.24998273328,232.456141868401" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="567.3333213528,195.102572394487">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-27.0833386195204,37.3535694739148"
+              Start="0,0"
+              End="-27.0833386195204,29.8535694739148">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.6767847369574" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.6767847369574"
+                    Point2="0,18.6767847369574"
+                    Point3="-4,18.6767847369574" />
+                  <mssgle:LineSegment
+                    End="-23.0833386195204,18.6767847369574" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23.0833386195204,18.6767847369574"
+                    Point2="-27.0833386195204,18.6767847369574"
+                    Point3="-27.0833386195204,22.6767847369574" />
+                  <mssgle:LineSegment
+                    End="-27.0833386195204,29.8535694739148" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
