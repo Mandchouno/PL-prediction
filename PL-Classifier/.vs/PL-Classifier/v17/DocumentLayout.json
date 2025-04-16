@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4C820B84-6E32-47C4-8E9F-C8FA562637F7}|PL-Classifier.pyproj|C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{4C820B84-6E32-47C4-8E9F-C8FA562637F7}|PL-Classifier.pyproj|solutionrelative:classifier.py||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,24 +33,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "classifier.py",
-              "DocumentMoniker": "C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\classifier.py",
-              "RelativeDocumentMoniker": "classifier.py",
-              "ToolTip": "C:\\Users\\tokam\\Documents\\Big Projects\\Win 2025\\Machine Learning\\Premier league prediction\\data\\PL-prediction-db\\PL-Classifier\\classifier.py",
-              "RelativeToolTip": "classifier.py",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-11T17:21:31.847Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }
