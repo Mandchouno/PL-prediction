@@ -1,9 +1,6 @@
-PL-Classifier/env/Lib/site-packages/*
-PL-Classifier/env/Lib/site-packages/
-PL-Classifier/env/Lib/site-packages
-
-PL-Classifier/env/Lib/site-packages/_pycache_
-PL-Classifier/env/Lib/site-packages/keras
+# Python virtual environment
+env/
+PL-Classifier/env/
 
 PL-Classifier/standings_predicted.csv
 PL-Classifier/results_predictions.csv
