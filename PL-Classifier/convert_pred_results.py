@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the results data
-df = pd.read_csv("PL-Classifier\\results_predictions.csv")  # Replace with the correct file path
+df = pd.read_csv("PL-Classifier\\match_goals_predictions.csv")  # Replace with the correct file path
 
 # Dictionary to store team standings
 standings = {}
@@ -11,8 +11,8 @@ for _, row in df.iterrows():
     season = row["Season"]
     home_team = row["HomeTeam"]
     away_team = row["AwayTeam"]
-    home_goals = row["HomeGoals"]
-    away_goals = row["AwayGoals"]
+    home_goals = row["FTHG"]
+    away_goals = row["FTAG"]
     result = row["FTR"]  # H, A, D
 
     for team in [home_team, away_team]:
@@ -73,7 +73,7 @@ standings_df["Qualification or relegation"] = standings_df["Pos"].apply(assign_s
 standings_df = standings_df[["Season", "Pos", "Team", "Pld", "W", "D", "L", "GF", "GA", "GD", "Pts", "Qualification or relegation"]]
 
 # Save to CSV
-standings_df.to_csv("standings_predicted.csv", index=False)
+standings_df.to_csv("PL-Classifier\\match_results_predicted.csv", index=False)
 
 # Display the final standings
 # print(standings_df)
