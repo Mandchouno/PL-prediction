@@ -1,6 +1,6 @@
 # Python virtual environment
-env/
-PL-Classifier/env/
+venv/
+PL-Classifier/venv/
 
 PL-Classifier/standings_predicted.csv
 PL-Classifier/results_predictions.csv
