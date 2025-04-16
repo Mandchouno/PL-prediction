@@ -18,7 +18,8 @@ def get_file_links():
         href = link['href']
         if href.endswith('.csv'):
             file_name = href.split('/')[-1]
-            if file_name ==  '2011-2012.csv': break
+            # we will consider all files
+            # if file_name ==  '2011-2012.csv': break
             if file_name not in file_links : file_links.append(file_name)
     
     return file_links
@@ -41,16 +42,18 @@ def download_and_process_files(file_links):
 
 jsonData = download_and_process_files(get_file_links())
 
-csvUrl = "https://github.com/yuliang419/football-predictor/blob/6d8b6b6ed2ad049012c8d3192146dde8e7a6de93/data/EPL_processed_results.csv?raw=true"
-df = pd.read_csv(csvUrl)
-if "Unnamed: 0" in df.columns:
-    # delete column
-    df = df.drop('Unnamed: 0', axis=1)
-    # df.rename(columns={"Unnamed: 0": "fixture_id"}, inplace=True)
-fixture_id = jsonData[-1]['fixture_id']+1
-df['fixture_id'] = range(fixture_id, fixture_id + len(df))
-data = df.to_json(orient="records")
-jsonData.extend(json.loads(data))
+# we leave out other data
+# csvUrl = "https://github.com/yuliang419/football-predictor/blob/6d8b6b6ed2ad049012c8d3192146dde8e7a6de93/data/EPL_processed_results.csv?raw=true"
+# df = pd.read_csv(csvUrl)
+# if "Unnamed: 0" in df.columns:
+#     # delete column
+#     df = df.drop('Unnamed: 0', axis=1)
+#     # df.rename(columns={"Unnamed: 0": "fixture_id"}, inplace=True)
+# fixture_id = jsonData[-1]['fixture_id']+1
+# df['fixture_id'] = range(fixture_id, fixture_id + len(df))
+# data = df.to_json(orient="records")
+# jsonData.extend(json.loads(data))
+
 jsonData = json.dumps({"fixtures": jsonData}, ensure_ascii=False)
 
 # server = "master-vitam-aeternam.database.windows.net"
