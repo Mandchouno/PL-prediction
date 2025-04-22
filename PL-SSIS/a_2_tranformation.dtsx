@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{A5E03CEE-FBFA-49EF-9CB9-1AEF92BD3A5A}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{82E981C5-BD98-478B-A893-D245066F41DA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -69,15 +69,20 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[master-vitam-aeternam.database.windows.net.PL-prediction-azure.CloudSA55a217df]"
+      DTS:refId="Package.ConnectionManagers[master-ad-vitam-aeternam.database.windows.net.PL-prediction-db.mandiSql]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{A23209CB-40FD-4999-90D3-EA91542A9AED}"
-      DTS:ObjectName="master-vitam-aeternam.database.windows.net.PL-prediction-azure.CloudSA55a217df">
+      DTS:ObjectName="master-ad-vitam-aeternam.database.windows.net.PL-prediction-db.mandiSql">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=master-vitam-aeternam.database.windows.net;User ID=CloudSA55a217df;Initial Catalog=PL-prediction-azure;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{A23209CB-40FD-4999-90D3-EA91542A9AED}master-vitam-aeternam.database.windows.net.PL-prediction-azure.CloudSA55a2;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=master-ad-vitam-aeternam.database.windows.net;User ID=mandiSql;Initial Catalog=PL-prediction-db;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package1-{A23209CB-40FD-4999-90D3-EA91542A9AED}master-vitam-aeternam.database.windows.net.PL-prediction-azure.CloudSA55a2;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAogxHP7vzcku7+Q18zB3FSwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADuuc/98adYNxe+AQkGGnTrIKwbpLn4huTiiktJg+YLZAAAAAAOgAAAAAIAACAAAAAgDGidf8dZrmDnPHO2tHLyMSGR1oZIVq3Dshrd2/1QeiAAAADFNafSS8JSR/UwcndPIJzKBN2+05klhrLH6+ciuA13AEAAAACRlLfUPPb6NKuDMQONprgc5Bre+tNKrg2qbGqewNLhPATZk1IF/B5e17rjI7VcdUmcNa+uzmCdzTOSjESYBln0</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -114,7 +119,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{762CC735-4EBC-419F-92A4-0306FD36C566}"
+          SQLTask:Connection="{A23209CB-40FD-4999-90D3-EA91542A9AED}"
           SQLTask:SqlStmtSourceType="FileConnection"
           SQLTask:SqlStatementSource="load_match_results.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
@@ -213,6 +218,10 @@
           Id="Package\load fixtures in final schema"
           TopLeft="461.999988019467,152.43590572782" />
         <NodeLayout
+          Size="188,42.6666666666667"
+          Id="Package\load new match results"
+          TopLeft="446.24998273328,232.456141868401" />
+        <NodeLayout
           Size="180,42.6666666666667"
           Id="Package\transform data\transform load source rankings"
           TopLeft="26.5,107.5" />
@@ -295,10 +304,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="188,42.6666666666667"
-          Id="Package\load new match results"
-          TopLeft="446.24998273328,232.456141868401" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="567.3333213528,195.102572394487">
