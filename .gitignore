@@ -8,3 +8,5 @@ PL-SQL
 PL-SSIS
 PL-Classifier/match_goals_predictions.csv
 PL-Classifier/g_results_predictions.csv
+PL-Classifier/all_plots.pdf
+PL-Classifier/all_prints.txt
