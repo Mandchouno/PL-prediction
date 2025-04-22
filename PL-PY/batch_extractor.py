@@ -56,14 +56,14 @@ jsonData = download_and_process_files(get_file_links())
 
 jsonData = json.dumps({"fixtures": jsonData}, ensure_ascii=False)
 
-# server = "master-vitam-aeternam.database.windows.net"
-# database = "PL-prediction-azure"
-# username = "CloudSA55a217df"
-# password = "1234Mama!"
-server = "."
+server = "master-ad-vitam-aeternam.database.windows.net"
 database = "PL-prediction-db"
-username = "lilian"
-password = "12345678"
+username = "mandiSql"
+password = "mandiTeo25"
+# server = "."
+# database = "PL-prediction-db"
+# username = "lilian"
+# password = "12345678"
 driver = "ODBC Driver 17 for SQL Server"
 conn_str = f"mssql+pyodbc://{username}:{password}@{server}/{database}?driver={driver}"
 engine = create_engine(conn_str)
