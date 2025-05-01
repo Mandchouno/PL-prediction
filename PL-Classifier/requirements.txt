@@ -98,3 +98,11 @@ scikit-learn==1.3.2
 imbalanced-learn==0.13.0
 pgmpy==0.1.23
 ipython==8.14.0
+pandas
+numpy
+scikit-learn
+matplotlib
+networkx
+imblearn
+torch
+torch-geometric
