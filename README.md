@@ -10,6 +10,7 @@ Ce dépôt contient les fichiers nécessaires pour la prédiction des résultats
   - le notebook principal du modèle FNN,
   - un sous-dossier `bayes_classifier` regroupant les classificateurs bayésiens,
   - un sous-dossier `GCN` pour le modèle de type GCN.
+  - le rapport final `rapport final` expliquant les démarches utilisé en détails
 
 ## Dépendances
 
